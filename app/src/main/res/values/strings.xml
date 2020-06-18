@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="usd">USD to Euro</string>
+    <string name="euro">Euro to USD</string>
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="convertbutton">Convert Button</string>
+    <string name="nonumber">ERROR: No Number or box checked</string>
+    <string name="checkone">ERROR: Check only one box</string>
+    <string name="dollarsign">$</string>
+    <string name="eurosign">€</string>
+</resources>
