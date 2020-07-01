@@ -17,7 +17,9 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
     RadioButton euroToUSD;
     RadioButton usdToEuro;
+    RadioButton customExchange;
     EditText input;
+    EditText customInput;
     TextView output;
     ImageButton convert;
 
@@ -29,9 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
         euroToUSD = findViewById(R.id.eurotousd);
         usdToEuro = findViewById(R.id.usdtoeuro);
+        customExchange = findViewById(R.id.customrate);
         input = findViewById(R.id.input);
+        customInput = findViewById(R.id.custominput);
         output = findViewById(R.id.output);
         convert = findViewById(R.id.convertbutton);
+
 
         convert.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -46,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
                     String sign = getString(R.string.eurosign);
                     Double conversionRate = 1.13;
                     convert(sign, conversionRate);
+
+                } else if (customExchange.isChecked()){
+                    String customCheck = customInput.getText().toString();
+                    if (customCheck.isEmpty()) {
+                        output.setText(R.string.blank);
+                    } else {
+                        String sign = " ";
+                        String custom = customInput.getText().toString();
+                        Double conversionRate = Double.parseDouble(custom) * 0.01;
+                        convert(sign, conversionRate);
+                    }
 
                 } else {
                     output.setText(getString(R.string.error));

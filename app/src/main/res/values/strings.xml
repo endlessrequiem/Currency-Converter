@@ -5,8 +5,9 @@
     <string name="input">Input</string>
     <string name="output">Output</string>
     <string name="convertbutton">Convert Button</string>
-    <string name="nonumber">ERROR: No Number or box checked</string>
-    <string name="checkone">ERROR: Check only one box</string>
+    <string name="error">ERROR</string>
     <string name="dollarsign">$</string>
     <string name="eurosign">€</string>
+    <string name="custom">Custom Exchange Rate (%)</string>
+    <string name="blank">ERROR</string>
 </resources>

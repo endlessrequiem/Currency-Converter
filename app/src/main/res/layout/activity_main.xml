@@ -7,40 +7,43 @@
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/eurocheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="558dp"
-        android:text="@string/euro"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/usdcheck"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/usdcheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="125dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="558dp"
-        android:text="@string/usd"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="124dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eurocheck"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/customrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/custom" />
+
+        <RadioButton
+            android:id="@+id/eurotousd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/euro" />
+
+        <RadioButton
+            android:id="@+id/usdtoeuro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/usd" />
+    </RadioGroup>
 
     <EditText
         android:id="@+id/input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="89dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="424dp"
         android:autofillHints="false"
@@ -50,8 +53,7 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eurocheck" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/convertbutton"
@@ -82,4 +84,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input" />
+
+    <EditText
+        android:id="@+id/custominput"
+        android:layout_width="97dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="%"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
