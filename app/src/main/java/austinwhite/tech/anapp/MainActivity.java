@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         String sign = " ";
                         String custom = customInput.getText().toString();
-                        Double conversionRate = Double.parseDouble(custom) * 0.01;
+                        Double conversionRate = Double.parseDouble(custom);
                         convert(sign, conversionRate);
                     }
 

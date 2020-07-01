@@ -10,4 +10,5 @@
     <string name="eurosign">€</string>
     <string name="custom">Custom Exchange Rate (%)</string>
     <string name="blank">ERROR</string>
+    <string name="xchangehint">0.00</string>
 </resources>
